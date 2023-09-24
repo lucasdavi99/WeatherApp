@@ -1,7 +1,7 @@
 # WeatherApp - Aplicativo de Previsão do Tempo
 
 
-O WeatherApp é um projeto desenvolvido para a disciplina de Programação Web. Este aplicativo permite aos usuários obter informações atualizadas sobre a previsão do tempo para diferentes cidades em todo o mundo.
+O WeatherApp é um projeto desenvolvido para a disciplina de Teste - Manutenção e Análise de Sistemas. Este aplicativo permite aos usuários obter informações atualizadas sobre a previsão do tempo para diferentes cidades em todo o mundo.
 
 ## Funcionalidades Principais
 
