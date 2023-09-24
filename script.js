@@ -1,5 +1,16 @@
 feather.replace();
 
+// Função que coleta a descrição inicial do tempo e retorna uma tag apropriada
+function filterWeather(initialWeather){
+    if (initialWeather.includes('rain')){
+        return "chuvoso";
+    } else if (initialWeather.includes('clouds')){
+        return "nublado";
+    } else {
+        return "ensolarado"
+    }
+}
+
 // Função para atualizar o fundo do elemento .weather-side
 function updateWeatherBackground(desc) {
   const weatherSideElement = document.querySelector(".weather-side");
@@ -11,16 +22,24 @@ function updateWeatherBackground(desc) {
 
   let bgImage = "";
 
-  switch (desc) {
-      case "ensolarado":
-          bgImage = "";
+  let weatherTag = filterWeather(desc)
+  console.log(weatherTag)
+
+  
+
+
+  switch (weatherTag) {
+        case "ensolarado":
+          bgImage = "./assets/imagem-dia-ensolarado.webp";
           break;
-      case "nublado":
-          bgImage = "";
+          case "nublado":
+          bgImage = "./assets/imagem-dia-nublado.jpg";
+          //   bgImage = "";
           weatherSideElement.style.backgroundRepeat = 'no-repeat';  // Evitar a repetição
           break;
-      case "chuvoso":
-          bgImage = ""; // Você pode substituir por uma URL ou caminho apropriado
+          case "chuvoso":
+          bgImage = "./assets/imagem-dia-chuvoso.jpg";
+        //   bgImage = ""; // Você pode substituir por uma URL ou caminho apropriado
           weatherSideElement.style.backgroundSize = 'cover'; 
           break
       default:
