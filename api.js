@@ -1,4 +1,3 @@
-// Substitua 'YOUR_API_KEY' pela sua chave de API do OpenWeather
 const apiKey = '9ff8d06cca7a6940798faad184e1d9c9';
 
 function mapWeatherIcon(iconCode) {
@@ -156,4 +155,8 @@ changeLocationButton.addEventListener('click', function () {
   locationElement.textContent = newCity + ', ' + newCountry;
 
   locationModal.style.display = 'none';
+});
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  getWeather('Recife', 'Brasil');
 });
