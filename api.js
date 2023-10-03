@@ -145,10 +145,14 @@ function getWeather(city, country) {
 // Event listener para o botão "Change location"
 var changeLocationButton = document.getElementById('changeLocationButton');
 changeLocationButton.addEventListener('click', function () {
-  var newCity = document.getElementById('newCity').value;
-  var newCountry = document.getElementById('newCountry').value;
+  var newCity = document.getElementById('newCity').value.trim();
+  var newCountry = document.getElementById('newCountry').value.trim();
 
-  // Chamar a função para buscar os dados da previsão do tempo com a nova cidade e país
+  if (newCity === '' || newCountry === '') {
+    alert('Por favor, preencha todos os campos.');
+    return;
+  }
+
   getWeather(newCity, newCountry);
 
   var locationElement = document.querySelector('.location');
