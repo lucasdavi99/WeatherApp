@@ -66,19 +66,9 @@ closeButton.addEventListener("click", function() {
     locationModal.style.display = "none";
 });
 
-var changeLocationButton = document.getElementById("changeLocationButton");
 
-changeLocationButton.addEventListener("click", function() {
-    var newCity = document.getElementById("newCity").value;
-    var newCountry = document.getElementById("newCountry").value;
 
-    var locationElement = document.querySelector(".location");
-    locationElement.textContent = newCity + ", " + newCountry;
 
-    locationModal.style.display = "none";
-});
-
-// ... (mantenha suas funções de modal aqui)
 
 document.addEventListener("DOMContentLoaded", function() {
   feather.replace();
